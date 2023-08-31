@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 
+
 app = Flask(__name__)
 
 books = [
@@ -46,6 +47,5 @@ def delete_book(id):
             del books[index]
             
     return jsonify(books)
-
 
 app.run(port=5000,host='localhost',debug=True)
